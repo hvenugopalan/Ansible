@@ -1,4 +1,4 @@
-- name: Hello World Sample
+- name: Hello World Sample Pause Less than 10 minutes
   hosts: all
   tasks:
     - pause:
