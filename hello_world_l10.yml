@@ -1,8 +1,6 @@
 - name: Hello World Sample Pause Less than 10 minutes
   hosts: all
   tasks:
-    - pause:
-        minutes: 2
     - name: Hello Message
       debug:
         msg: "Hello World! {{ user }}"
