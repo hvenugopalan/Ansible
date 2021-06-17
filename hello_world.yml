@@ -1,8 +1,6 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - pause:
-        minutes: 11
     - name: Hello Message
       debug:
         msg: "Hello World! {{ user }}"
