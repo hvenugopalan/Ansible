@@ -2,7 +2,7 @@
   hosts: all
   tasks:
     - pause:
-        minutes: 9
+        minutes: 2
     - name: Hello Message
       debug:
         msg: "Hello World! {{ user }}"
