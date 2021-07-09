@@ -5,7 +5,7 @@
      - name: Copy the script
        win_copy:
          src: /home/nutanix/hari/expand_disk.ps1
-         dest: C:\Temp\expand_disk.ps1
+         dest: C:\temp\expand_disk.ps1
  
      - name: Run the script
        win_shell: C:\temp\expand_disk.ps1
