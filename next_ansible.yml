@@ -1,11 +1,11 @@
 ---
 - name: Let's copy our executable script to remote location, execute script and get result back.
-  remote_user: root
-  sudo: yes
   hosts: next-ansible-demo
   tasks:
-     - name: Transfer executable script script
-       copy: src=/home/nutanix/hari/expand_disk.sh dest=/home/nutanix/ansible_scripts mode=0777
+     - name: Copy the script
+       win_copy:
+         src: /home/nutanix/hari/expand_disk.ps1
+         dest: C:\Temp\expand_disk.ps1
  
-     - name: Execute the script
-       command: sh /home/nutanix/ansible_scripts/expand_disk.sh
+     - name: Run the script
+       win_shell: C:\temp\expand_disk.ps1
