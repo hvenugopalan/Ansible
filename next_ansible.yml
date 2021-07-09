@@ -4,8 +4,10 @@
   tasks:
      - name: Copy the script
        win_copy:
-         content: 'Resize-Partition -DriveLetter D -Size 11.5GB 
-         Invoke-Sqlcmd -InputFile "C:\Users\Administrator\Desktop\change_db_size.sql" -ServerInstance "localhost"'
+         content: |
+           Resize-Partition -DriveLetter D -Size 11.5GB  
+           
+           Invoke-Sqlcmd -InputFile "C:\Users\Administrator\Desktop\change_db_size.sql" -ServerInstance "localhost"
          dest: C:\temp\expand_disk.ps1
  
      - name: Run the script
